@@ -33,7 +33,7 @@ class PersonaForm(forms.ModelForm):
 
 class SolicitudForm(forms.ModelForm):
 	class Meta:
-		model = Persona
+		model = Solicitud
 
 		fields = [
 			'numeros_mascotas',
