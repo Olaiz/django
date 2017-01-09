@@ -1,5 +1,5 @@
 from django import forms
-from apps.mascota.models import Mascota
+from apps.adopcion.models import Persona,Solicitud
 
 class PersonaForm(forms.ModelForm):
 	class Meta:
@@ -28,7 +28,7 @@ class PersonaForm(forms.ModelForm):
 			'edad': forms.TextInput(attrs={'class':'form-control'}),
 			'telefono': forms.TextInput(attrs={'class':'form-control'}),
 			'email': forms.TextInput(attrs={'class':'form-control'}),
-			'domicilio': forms.TextArea(attrs={'class':'form-control'}),
+			'domicilio': forms.Textarea(attrs={'class':'form-control'}),
 		}
 
 class SolicitudForm(forms.ModelForm):
@@ -46,5 +46,5 @@ class SolicitudForm(forms.ModelForm):
 		}
 		widgets = {
 			'numeros_mascotas': forms.TextInput(attrs={'class':'form-control'}),
-			'razones': forms.TextArea(attrs={'class':'form-control'}),
+			'razones': forms.Textarea(attrs={'class':'form-control'}),
 		}
